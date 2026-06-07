@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Handwriting Quality Checker</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="page">
+    <section class="panel hero">
+      <p class="eyebrow">Flask + Handwriting Analysis</p>
+      <h1>Upload a handwriting image and view the prediction instantly.</h1>
+      <p class="subtitle">The app uses your existing preprocessing, feature extraction, and supervised classification functions.</p>
+
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <div class="flash-list">
+            {% for message in messages %}
+              <div class="flash">{{ message }}</div>
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endwith %}
+
+      <form method="post" enctype="multipart/form-data" class="upload-form">
+        <label for="image" class="upload-label">Choose an image</label>
+        <input id="image" name="image" type="file" accept=".png,.jpg,.jpeg,.bmp,.webp" required>
+        <button type="submit">Analyze Handwriting</button>
+      </form>
+    </section>
+
+    {% if result %}
+      <section class="results-grid">
+        <article class="panel">
+          <h2>Prediction Result</h2>
+          <div class="result-badge">{{ result.label }}</div>
+          <p class="confidence">Confidence: {{ "%.1f"|format(result.confidence) }}%</p>
+          <p class="model">Model used: {{ result.model_name }}</p>
+        </article>
+
+        <article class="panel">
+          <h2>Uploaded Image</h2>
+          {% if image_url %}
+            <img src="{{ image_url }}" alt="Uploaded handwriting image" class="preview-image">
+          {% endif %}
+        </article>
+
+        <article class="panel">
+          <h2>Class Probabilities</h2>
+          <div class="metric-list">
+            {% for label, probability in result.probabilities.items() %}
+              <div class="metric-row">
+                <span>{{ label }}</span>
+                <strong>{{ "%.1f"|format(probability * 100) }}%</strong>
+              </div>
+            {% endfor %}
+          </div>
+        </article>
+
+        <article class="panel">
+          <h2>Extracted Features</h2>
+          <div class="metric-list">
+            {% for feature, value in result.features.items() %}
+              <div class="metric-row">
+                <span>{{ feature }}</span>
+                <strong>{{ "%.4f"|format(value) }}</strong>
+              </div>
+            {% endfor %}
+          </div>
+        </article>
+
+        {% if result.feedback %}
+          <article class="panel feedback-panel">
+            <h2>Where to Improve</h2>
+            <div class="feedback-list">
+              {% for item in result.feedback %}
+                <div class="feedback-item">
+                  <strong>{{ item.feature }}</strong>
+                  <p>{{ item.message }}</p>
+                  <span>Your score: {{ "%.4f"|format(item.value) }} · Excellent target: {{ "%.4f"|format(item.target) }}</span>
+                </div>
+              {% endfor %}
+            </div>
+          </article>
+        {% endif %}
+
+        {% if chart_url %}
+          <article class="panel chart-panel">
+            <h2>Prediction Visualization</h2>
+            <img src="{{ chart_url }}" alt="Prediction confidence chart" class="chart-image">
+          </article>
+        {% endif %}
+      </section>
+    {% endif %}
+  </main>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Handwriting — Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body class="p-4">
+    <div class="container">
+      <a href="{{ url_for('index') }}" class="btn btn-link mb-3">← Back</a>
+      <h1>Result</h1>
+
+      <div class="row mt-4">
+        <div class="col-md-5">
+          <img src="{{ url_for('static', filename='uploads/' + item.filename) }}" alt="uploaded" class="img-fluid preview-img">
+        </div>
+        <div class="col-md-7">
+          <h3>Handwriting Score: {{ item.confidence }} / 100</h3>
+          <div class="progress my-2" style="height: 26px;">
+            <div class="progress-bar" role="progressbar" style="width: {{ item.confidence }}%;" aria-valuenow="{{ item.confidence }}" aria-valuemin="0" aria-valuemax="100">{{ item.confidence }}%</div>
+          </div>
+
+          <h5 class="mt-3">Quality: 
+            {% if item.label == 'Bad' %}
+              <span class="badge bg-danger">Bad</span>
+            {% elif item.label == 'Good' %}
+              <span class="badge bg-success">Good</span>
+            {% elif item.label == 'Excellent' %}
+              <span class="badge bg-primary">Excellent</span>
+            {% else %}
+              <span class="badge bg-secondary">Unknown</span>
+            {% endif %}
+          </h5>
+
+          <h5 class="mt-4">Why this result?</h5>
+          <ul>
+            {% for r in item.reasons %}
+              <li><strong>{{ r.feature }}</strong>: {{ r.direction }} — impact: {{ r.impact }}</li>
+            {% endfor %}
+          </ul>
+
+          <h5 class="mt-3">Features</h5>
+          <ul class="small text-muted">
+            {% for k, v in item.features.items() %}
+              <li>{{ k }}: {{ "%.2f"|format(v) }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

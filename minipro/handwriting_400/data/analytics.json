@@ -1,0 +1,252 @@
+[
+  {
+    "id": "c53f34f29c8348429d3bc1e848694c4f",
+    "filename": "0aa11da6b38d471ca6128073ccbc0a56.png",
+    "cluster_id": 2,
+    "label": "Bad",
+    "confidence": 0.2,
+    "features": {
+      "Spacing (CoV)": 0.4595228453423572,
+      "Baseline Variation": 15.532593536651568,
+      "Fluency (px/stroke)": 38.78947368421053,
+      "Stroke Breaks": 57.0,
+      "Smoothness (roughness)": 29353.32544706762
+    },
+    "distances": [
+      959.185011250198,
+      958.7033177408354,
+      956.8064305051199
+    ],
+    "reasons": [
+      {
+        "feature": "Smoothness (roughness)",
+        "value": 29353.32544706762,
+        "direction": "Higher than average",
+        "impact": "worse"
+      },
+      {
+        "feature": "Spacing (CoV)",
+        "value": 0.4595228453423572,
+        "direction": "Lower than average",
+        "impact": "better"
+      },
+      {
+        "feature": "Stroke Breaks",
+        "value": 57.0,
+        "direction": "Higher than average",
+        "impact": "worse"
+      }
+    ],
+    "supervised": {
+      "pred_index": 0,
+      "label": "Bad",
+      "confidence": 39.8,
+      "proba": [
+        0.39769257871312796,
+        0.20564186972195847,
+        0.3966655515649136
+      ],
+      "feature_importances": null
+    }
+  },
+  {
+    "id": "d14ddea7352f43eab3d25bb0def411d0",
+    "filename": "061a4c28be4f41cd8ff33a4f81f91b9b.png",
+    "cluster_id": 2,
+    "label": "Bad",
+    "confidence": 0.3,
+    "features": {
+      "Spacing (CoV)": 0.49226282814346967,
+      "Baseline Variation": 12.267020685863542,
+      "Fluency (px/stroke)": 31.83606557377049,
+      "Stroke Breaks": 61.0,
+      "Smoothness (roughness)": 28579.40608402714
+    },
+    "distances": [
+      933.8352876328399,
+      933.3546299002405,
+      931.4584289652628
+    ],
+    "reasons": [
+      {
+        "feature": "Smoothness (roughness)",
+        "value": 28579.40608402714,
+        "direction": "Higher than average",
+        "impact": "worse"
+      },
+      {
+        "feature": "Stroke Breaks",
+        "value": 61.0,
+        "direction": "Higher than average",
+        "impact": "worse"
+      },
+      {
+        "feature": "Baseline Variation",
+        "value": 12.267020685863542,
+        "direction": "Lower than average",
+        "impact": "better"
+      }
+    ],
+    "supervised": {
+      "pred_index": 0,
+      "label": "Bad",
+      "confidence": 39.8,
+      "proba": [
+        0.39769257871312796,
+        0.20564186972195847,
+        0.3966655515649136
+      ],
+      "feature_importances": null
+    }
+  },
+  {
+    "id": "49ea2e60b9cf4cb68b7833722f646f01",
+    "filename": "259f615ea81f43679a26f9418a860a79.png",
+    "cluster_id": 2,
+    "label": "Bad",
+    "confidence": 0.1,
+    "features": {
+      "Spacing (CoV)": 1.9142057913060175,
+      "Baseline Variation": 38.886945827723935,
+      "Fluency (px/stroke)": 325.27777777777777,
+      "Stroke Breaks": 18.0,
+      "Smoothness (roughness)": 88599.59802031517
+    },
+    "distances": [
+      2899.9721227684436,
+      2899.4798319031274,
+      2897.5714631521023
+    ],
+    "reasons": [
+      {
+        "feature": "Smoothness (roughness)",
+        "value": 88599.59802031517,
+        "direction": "Higher than average",
+        "impact": "worse"
+      },
+      {
+        "feature": "Spacing (CoV)",
+        "value": 1.9142057913060175,
+        "direction": "Higher than average",
+        "impact": "worse"
+      },
+      {
+        "feature": "Fluency (px/stroke)",
+        "value": 325.27777777777777,
+        "direction": "Higher than average",
+        "impact": "better"
+      }
+    ],
+    "supervised": {
+      "pred_index": 0,
+      "label": "Bad",
+      "confidence": 39.8,
+      "proba": [
+        0.39769257871312796,
+        0.20564186972195847,
+        0.3966655515649136
+      ],
+      "feature_importances": null
+    }
+  },
+  {
+    "id": "b370e3ddea914115b3ac0b4b5f75256d",
+    "filename": "ac57fe8dd40641bbb87dd7b33354b772.png",
+    "cluster_id": 2,
+    "label": "Bad",
+    "confidence": 0.2,
+    "features": {
+      "Spacing (CoV)": 0.4595228453423572,
+      "Baseline Variation": 15.532593536651568,
+      "Fluency (px/stroke)": 38.78947368421053,
+      "Stroke Breaks": 57.0,
+      "Smoothness (roughness)": 29353.32544706762
+    },
+    "distances": [
+      959.185011250198,
+      958.7033177408354,
+      956.8064305051199
+    ],
+    "reasons": [
+      {
+        "feature": "Smoothness (roughness)",
+        "value": 29353.32544706762,
+        "direction": "Higher than average",
+        "impact": "worse"
+      },
+      {
+        "feature": "Spacing (CoV)",
+        "value": 0.4595228453423572,
+        "direction": "Lower than average",
+        "impact": "better"
+      },
+      {
+        "feature": "Stroke Breaks",
+        "value": 57.0,
+        "direction": "Higher than average",
+        "impact": "worse"
+      }
+    ],
+    "supervised": {
+      "pred_index": 0,
+      "label": "Bad",
+      "confidence": 39.8,
+      "proba": [
+        0.39769257871312796,
+        0.20564186972195847,
+        0.3966655515649136
+      ],
+      "feature_importances": null
+    }
+  },
+  {
+    "id": "3b76d1cf4fe34a1ea10282eea0c94064",
+    "filename": "5bc8bbc11be04803a394090e5a9a1cb7.png",
+    "cluster_id": 2,
+    "label": "Bad",
+    "confidence": 0.3,
+    "features": {
+      "Spacing (CoV)": 0.5634236817413636,
+      "Baseline Variation": 17.432067390093803,
+      "Fluency (px/stroke)": 32.50819672131148,
+      "Stroke Breaks": 61.0,
+      "Smoothness (roughness)": 27749.922882020473
+    },
+    "distances": [
+      906.6595939458588,
+      906.178228756147,
+      904.2821963177573
+    ],
+    "reasons": [
+      {
+        "feature": "Smoothness (roughness)",
+        "value": 27749.922882020473,
+        "direction": "Higher than average",
+        "impact": "worse"
+      },
+      {
+        "feature": "Stroke Breaks",
+        "value": 61.0,
+        "direction": "Higher than average",
+        "impact": "worse"
+      },
+      {
+        "feature": "Baseline Variation",
+        "value": 17.432067390093803,
+        "direction": "Lower than average",
+        "impact": "better"
+      }
+    ],
+    "supervised": {
+      "pred_index": 0,
+      "label": "Bad",
+      "confidence": 39.8,
+      "proba": [
+        0.39769257871312796,
+        0.20564186972195847,
+        0.3966655515649136
+      ],
+      "feature_importances": null
+    }
+  }
+]
